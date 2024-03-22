@@ -89,7 +89,7 @@ void Tank::DrawTracks(custom::Camera *camera, Shader *shader, glm::vec3 lightPos
         modelMatrix = glm::scale(modelMatrix, scale);
         modelMatrix = glm::rotate(modelMatrix, angleOY, up);
 
-        custom::RenderMesh(piece.first, piece.second, camera, shader, modelMatrix, lightPosition, health);
+        custom::RenderMesh(piece.first, piece.second, camera, shader, modelMatrix, lightPosition, MAX_HEALTH);
     } {
         glm::mat4 modelMatrix = glm::mat4(1.0f);
 
@@ -101,7 +101,7 @@ void Tank::DrawTracks(custom::Camera *camera, Shader *shader, glm::vec3 lightPos
         modelMatrix = glm::rotate(modelMatrix, bigWheel->GetAngleOX(), bigWheel->GetRight());
         modelMatrix = glm::translate(modelMatrix, -(bigWheel->GetCenter() - center));
 
-        custom::RenderMesh(bigWheelVisuals.first, bigWheelVisuals.second, camera, shader, modelMatrix, lightPosition, health);
+        custom::RenderMesh(bigWheelVisuals.first, bigWheelVisuals.second, camera, shader, modelMatrix, lightPosition, MAX_HEALTH);
     } {
         glm::mat4 modelMatrix = glm::mat4(1.0f);
 
@@ -113,7 +113,7 @@ void Tank::DrawTracks(custom::Camera *camera, Shader *shader, glm::vec3 lightPos
         modelMatrix = glm::rotate(modelMatrix, smallWheel->GetAngleOX(), smallWheel->GetRight());
         modelMatrix = glm::translate(modelMatrix, -(smallWheel->GetCenter() - center));
 
-        custom::RenderMesh(smallWheelVisuals.first, smallWheelVisuals.second, camera, shader, modelMatrix, lightPosition, health);
+        custom::RenderMesh(smallWheelVisuals.first, smallWheelVisuals.second, camera, shader, modelMatrix, lightPosition, MAX_HEALTH);
     }
 }
 

@@ -6,8 +6,6 @@
 #include "lab_m1/hw2/objects/tank.h"
 #include "utils/glm_utils.h"
 
-#define MAX_HEALTH 100.0f
-
 class Player {
     float health;
     Tank *tank;

@@ -8,6 +8,8 @@
 #include "lab_m1/hw2/visuals/camera.h"
 #include "lab_m1/hw2/visuals/material.h"
 
+#define MAX_HEALTH 100.0f
+
 typedef enum TankType {
     BASIC,
 } TankType;
